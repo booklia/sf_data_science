@@ -4,7 +4,7 @@
 
 import numpy as np
 
-def my_predict2(number: int = 1) -> int:
+def my_predict(number: int = 1) -> int:
     """Угадываем число
 
     Args:
@@ -57,7 +57,7 @@ def score_game(random_predict) -> int:
     """
     count_ls = []
     #np.random.seed(1)  # фиксируем сид для воспроизводимости
-    random_array = np.random.randint(1, 101, size=(1))  # загадали список чисел
+    random_array = np.random.randint(1, 101, size=(1000))  # загадали список чисел
 
     for number in random_array:
         count_ls.append(random_predict(number))
